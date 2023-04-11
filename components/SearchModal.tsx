@@ -42,8 +42,8 @@ const SearchModal: React.FC<SearchModalProps> = ({ visible, onClose }) => {
 	}
 
 	return (
-		<div className="z-50 transition duration-300 bg-black bg-opacity-80 flex justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0">
-			<div className="z-60 relative w-[94%] h-[94%] mx-auto max-w-3xl overflow-hidden bg-zinc-700 ">
+		<div className="z-50 transition duration-300 bg-black bg-opacity-80 flex justify-center items-center  overflow-x-hidden  fixed inset-0">
+			<div className="z-60 relative w-[94%] h-[94%] mx-auto max-w-3xl bg-zinc-600 overflow-x-scroll">
 				<div className="flex flex-row items-center space-x-2 w-[90%] m-2">
 					<BsSearch />
 					<input
@@ -71,8 +71,8 @@ const SearchModal: React.FC<SearchModalProps> = ({ visible, onClose }) => {
 				>
 					<XMarkIcon className="text-white w-6" />
 				</div>
-				<div className="flex items-center justify-center mt-8">
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 ">
+				<div className="flex items-center justify-center mt-8 ">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-1 ">
 						{searchResults.map((movie) => (
 							<MovieCard data={movie} key={movie.id}></MovieCard>
 						))}
